@@ -21,28 +21,28 @@
     </div>
     <!-- Navbar -->
     <header class="">
-        <nav class=" flex justify-between items-center py-8 w-[95%] mx-auto">
+        <nav class="fixed flex justify-between items-center py-8 w-[95%] mx-[3%]">
             <div>
-                <a class="bg-linear-65 from-violet-600  via-purple-600  to-cyan-400 inline-block text-transparent bg-clip-text font-bold" href="#">Dafikk</a>
+                <a class="bg-linear-65 from-violet-600 text-2xl via-purple-600  to-cyan-400 inline-block text-transparent bg-clip-text drop-shadow-lg drop-shadow-violet-500 font-bold brightness-125" href="#">Dafikk</a>
             </div>
             <div
-                class="nav-links md:static absolute min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full h-[80%] flex items-center px-5 ">
-                <ul class="text-white flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 ">
+                class="nav-links md:static absolute min-h-fit min-h-[60vh] left-0 top-[-1000%] md:w-auto w-full h-[80%] flex items-center px-4 duration-500 ease-in-out">
+                <ul class="text-white flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-bold">
                     <li class="">
-                        <a class="hover:text-gray-500" href="#">Home</a>
+                        <a class="opacity-80 hover:opacity-100 hover:underline " href="#">Home</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">About</a>
+                        <a class="opacity-80 hover:opacity-100 hover:underline " href="#">About</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Skill</a>
+                        <a class="opacity-80 hover:opacity-100 hover:underline " href="#">Skill</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Project</a>
+                        <a class="opacity-80 hover:opacity-100 hover:underline " href="#">Project</a>
                     </li>
                 </ul>
             </div>
-            <!-- Navbar Di Tampilan Mobile -->
+            <!-- Menu Toggle Di Tampilan Mobile -->
             <div class="flex items-center gap-6 md:hidden">
                 <ion-icon onclick="onToggleMenu(this)" name="menu-outline" class="text-3xl cursor-pointer text-white"></ion-icon>
             </div>

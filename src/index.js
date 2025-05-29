@@ -7,5 +7,5 @@ $(window).on('load', function(){
 const navLinks = document.querySelector('.nav-links')
 function onToggleMenu(e){
     e.name= e.name ==='close' ? 'menu' : 'close'
-    navLinks.classList.toggle('top-[-100px]')
+    navLinks.classList.toggle('top-[80px]')
 }
