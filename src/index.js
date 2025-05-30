@@ -11,7 +11,7 @@ function onToggleMenu(e) {
     navLinks.classList.toggle('top-[10%]'); 
 }
 
-
+// Untuk Run Textnya
 const typedTextSpan = document.getElementById('typedText');
 const textArray = ["Front End Web", "Desain Visual", "UI/UX     ", "Video Editing"];
 const typingSpeed = 150; // Kecepatan mengetik dalam ms (semakin kecil, semakin cepat)
