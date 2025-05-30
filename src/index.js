@@ -14,9 +14,9 @@ function onToggleMenu(e) {
 // Untuk Run Textnya
 const typedTextSpan = document.getElementById('typedText');
 const textArray = ["Front End Web", "Desain Visual", "UI/UX Design", "Video Editing"];
-const typingSpeed = 150; // Kecepatan mengetik dalam ms (semakin kecil, semakin cepat)
-const deletingSpeed = 100; // Kecepatan menghapus dalam ms
-const delayBetweenTexts = 1500; // Jeda sebelum mengetik teks berikutnya dalam ms
+const typingSpeed = 150; // Kecepatan mengetik (semakin kecil, semakin cepat)
+const deletingSpeed = 100; // Kecepatan menghapus
+const delayBetweenTexts = 1500; // Jeda sebelum mengetik teks berikutnya
 
 let textArrayIndex = 0;
 let charIndex = 0;
