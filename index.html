@@ -16,7 +16,7 @@
 
     <body class="relative font-[Poppins] bg-black min-h-screen">
         <!-- Background Index -->
-        <video class=" absolute inset-0 h-screen md:w-screen object-cover -z-50 brightness-60 opacity-30 blur-sm" src="../img/131999-751915336_large.mp4" autoplay muted loop></video>
+        <video class=" absolute fixed inset-0 h-screen md:w-screen object-cover -z-50 brightness-60 opacity-40 blur-sm" src="../img/131999-751915336_large.mp4" autoplay muted loop></video>
         <!-- Loading Screen -->
         <div class="spin-wrapper fixed inset-0 flex justify-center items-center  bg-black z-50 transition-opacity duration-500 opacity-100">
             <svg class="fill-white" width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_9Mto{animation:spinner_5GqJ 1.6s linear infinite;animation-delay:-1.6s}.spinner_bb12{animation-delay:-1s}@keyframes spinner_5GqJ{12.5%{x:13px;y:1px}25%{x:13px;y:1px}37.5%{x:13px;y:13px}50%{x:13px;y:13px}62.5%{x:1px;y:13px}75%{x:1px;y:13px}87.5%{x:1px;y:1px}}</style><rect class="spinner_9Mto" x="1" y="1" rx="1" width="10" height="10"/><rect class="spinner_9Mto spinner_bb12" x="1" y="1" rx="1" width="10" height="10"/></svg>
@@ -50,23 +50,35 @@
                 </div>
             </nav>
         </header>
-        <!-- Run Text -->
-        <div class="absolute top-24 lg:top-28 md:top-1/4 md:left-4 left-0 px-4">
+        <!-- intro -->
+        <div class="absolute top-24 lg:top-14 md:top-1/4 left-0 right-0 px-4 flex flex-col md:flex-row md:items-center md:justify-between h-[calc(100vh-6rem)] md:h-[calc(100vh-8rem)]">
+            <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0  md:text-left">
             <h1 class="text-white text-5xl md:text-7xl lg:text-8xl  font-bold ">Dafikkw</h1>
             <p class="font-light text-xl lg:text-2xl  text-white">
                 <br class="block sm:hidden">
                 <span id="typedText" class=""></span>
                 <span class="typing-cursor">|</span>
             </p>
-            <p class="font-light text-white brightness-80">i'm still beginner :3</p>
+            <p class="font-light text-white brightness-80 mb-4">I'm still learning to be a front end website developer. </p>
+            <div class="text-xs">
+            <button class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">HTML</button>
+            <button class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">CSS</button>
+            <button class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">Tailwind CSS</button>
+            <button class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">Javascript</button>
+            </div>
+            </div>
+            <!-- <a href="https://wa.me:/+6281377120177"get class="shadow-[0_0_10px_1px_rgba(255,255,255,0.7)] text-white bg-black px-6 py-2 rounded-lg absolute transition-all duration-300 hover:text-black hover:scale-110 hover:bg-white">
+                <button class=" font-semibold ">Contact me</button>
+            </a> -->
+            <div class="md:w-1/2 flex justify-center md:justify-end">
+
+                <img class="w-2/3 md:w-full lg:w-4/5 max-w-sm md:max-w-md lg:max-w-lg object-contain" src="../img/5ffa48b57267ecb8e6220c294f68b5b1-removebg-preview.png" alt="">
+            </div>
         </div>
-        <a href="#" class="text-white bg-black px-6 py-2 rounded-md  bottom-5 left-1/2 -translate-x-1/2 absolute transition-all duration-300 hover:text-black hover:scale-110 hover:bg-white">
-            <button class=" font-semibold ">NEXT</button>
-        </a>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="index.js"></script>
+        <script src="../src/index.js"></script>
     </body>
 
     </html>
