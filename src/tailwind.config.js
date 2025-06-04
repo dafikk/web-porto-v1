@@ -1,6 +1,12 @@
+// tailwind.config.js
 module.exports = {
-  // ...
+  content: [
+    "./*.html"
+  ],
+  theme: {
+    extend: {},
+  },
   plugins: [
-    require('tailwind-scrollbar-hide')
-  ]
+    require('@tailwindcss/typography'), // Tambahkan baris ini
+  ],
 }
