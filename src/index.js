@@ -5,11 +5,64 @@ $(window).on('load', function () {
 
 // Navbar Responsive
 function onToggleMenu(e) {
-    const navLinks = document.querySelector('.nav-links');
-    e.name = e.name === 'menu-outline' ? 'close-outline' : 'menu-outline';
-    navLinks.classList.toggle('top-[-1000%]');
-    navLinks.classList.toggle('top-[10%]'); 
-}
+            const navLinks = document.querySelector('.nav-links');
+            if (e.name === 'menu-outline') {
+                e.name = 'close-outline';
+                navLinks.classList.remove('top-[-1000%]');
+                navLinks.classList.add('top-[10%]'); // Set to 100% of header height
+            } else {
+                e.name = 'menu-outline';
+                navLinks.classList.remove('top-[10%]');
+                navLinks.classList.add('top-[-1000%]');
+            }
+        }
+
+const navbar = document.getElementById('navbar');
+        const scrollThreshold = 50; // Jarak scroll dalam piksel sebelum background berubah
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                // Tambahkan kelas untuk background dan shadow saat di-scroll
+                navbar.classList.add('bg-slate-900/90', 'backdrop-blur-md', 'shadow-lg');
+                navbar.classList.remove('bg-transparent'); // Hapus background transparan
+            } else {
+                // Hapus kelas background dan shadow saat di atas threshold
+                navbar.classList.remove('bg-slate-900/90', 'backdrop-blur-md', 'shadow-lg');
+                navbar.classList.add('bg-transparent'); // Tambahkan kembali background transparan
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('[data-animate-on-scroll]');
+
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        const delay = parseInt(element.dataset.delay) || 0; // Get delay from data-delay attribute
+
+                        setTimeout(() => {
+                            // Remove initial hidden/transformed state
+                            element.classList.remove('opacity-0', 'translate-y-12');
+                            // Add final visible state
+                            element.classList.add('opacity-100', 'translate-y-0');
+                        }, delay);
+
+                        observer.unobserve(element); // Stop observing after animation
+                    }
+                });
+            }, observerOptions);
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
 
 // Untuk Run Textnya
 const typedTextSpan = document.getElementById('typedText');
