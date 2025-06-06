@@ -1,5 +1,5 @@
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" class="scroll-smooth">
 
     <head>
         <meta charset="UTF-8">
@@ -13,28 +13,30 @@
             rel="stylesheet">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     </head>
-
-    <body class="relative font-[Poppins] bg-black min-h-screen bg-slate-900 scrollbar-hide overflow-y-scroll ">
+    <style>.glow{
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4);
+    }</style>
+    <body class=" no-scrollbar scrollbar-hidden font-[Poppins] bg-black min-h-screen bg-slate-900  ">
         <!-- Background Index -->
-        <!-- <video class=" absolute fixed inset-0 h-screen md:w-screen object-cover -z-50 brightness-60 opacity-40 blur-sm" src="../img/131999-751915336_large.mp4" autoplay muted loop></video> -->
+        <video class=" absolute fixed inset-0 h-screen md:w-screen object-cover -z-50 brightness-60 opacity-40 blur-sm" src="../img/131999-751915336_large.mp4" autoplay muted loop></video>
         <!-- Loading Screen -->
         <div class="spin-wrapper fixed inset-0 flex justify-center items-center  bg-black z-50 transition-opacity duration-500 opacity-100">
             <svg class="fill-white" width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_9Mto{animation:spinner_5GqJ 1.6s linear infinite;animation-delay:-1.6s}.spinner_bb12{animation-delay:-1s}@keyframes spinner_5GqJ{12.5%{x:13px;y:1px}25%{x:13px;y:1px}37.5%{x:13px;y:13px}50%{x:13px;y:13px}62.5%{x:1px;y:13px}75%{x:1px;y:13px}87.5%{x:1px;y:1px}}</style><rect class="spinner_9Mto" x="1" y="1" rx="1" width="10" height="10"/><rect class="spinner_9Mto spinner_bb12" x="1" y="1" rx="1" width="10" height="10"/></svg>
         </div>
         <!-- Navbar -->
-        <header class="fixed top-0 left-0 w-full z-40">
-            <nav class="flex justify-between items-center py-6 w-[95%] mx-auto">
+        <header class="fixed top-0 left-0 w-full z-40 transition-all duration-500 bg-transparent transition-all ease-in-out backdrop-blur-xl">
+            <nav class="flex justify-between items-center py-6 w-[95%] mx-auto ">
                 <div>
-                    <a class="text-2xl font-bold text-white text-glow" style="text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4);" href="#"> Dafikk</a>
+                    <a class="text-2xl font-bold text-white  glow" href="#"> Dafikk</a>
                 </div>
                 <div
-                    class="nav-links md:static absolute min-h-fit md:min-h-0 left-0 top-[-1000%] md:w-auto w-full h-[80%] flex items-center px-4 duration-500 ease-in-out bg-black md:bg-transparent py-12 md:py-0">
+                    class="nav-links md:static absolute min-h-fit md:min-h-0 left-0 top-[-1000%] md:w-auto w-full h-[80%] flex items-center px-4 duration-500 ease-in-out bg-slate-900/90 backdrop-blur-md  md:bg-transparent py-12 md:py-0">
                     <ul class="text-white flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-bold w-full md:w-auto text-center">
                         <li class="">
                             <a class="opacity-90 hover:opacity-100 hover:underline " href="#">Home</a>
                         </li>
                         <li>
-                            <a class="opacity-90 hover:opacity-100 hover:underline " href="#">About</a>
+                            <a class="opacity-90 hover:opacity-100 hover:underline " href="#about">About</a>
                         </li>
                         <li>
                             <a class="opacity-90 hover:opacity-100 hover:underline " href="#">Skill</a>
@@ -51,44 +53,64 @@
             </nav>
         </header>
         <!-- home -->
-        <div class="relative top-14 lg:top-18 md:top-18 left-8 right-16  flex flex-col justify-center lg:flex-row md:items-center md:justify-between h-[calc(100vh-6rem)] md:h-[calc(100vh-8rem)]">
-            <div class=" md:pr-8 mb-6 md:mb-0  text-left">
-            <h1 class="text-white text-5xl md:text-7xl lg:text-8xl  font-bold ">Dafikkw</h1>
-            <p class="font-light text-xl lg:text-2xl mb-8 text-white">
-                <br class="block sm:hidden">
-                <span id="typedText" class=""></span>
-                <span class="typing-cursor">|</span>
+        <main class="pt-[96px] md:pt-[86px] px-4 md:px-8"> 
+        <section id="home" class="flex flex-col justify-center lg:flex-row md:items-center md:justify-between min-h-[calc(100vh-96px)] md:min-h-[calc(100vh-128px)] py-12">
+            <div class="md:pr-8 mb-6 md:mb-0 text-left">
+                <h1 class="text-white text-5xl md:text-7xl lg:text-8xl font-bold ">Dafikkw</h1>
+                <p class="font-light text-xl lg:text-2xl mb-8 text-white">
+                    <br class="block sm:hidden">
+                    <span id="typedText" class=""></span>
+                    <span class="typing-cursor">|</span>
+                </p>
+                <p class="font-light text-white brightness-80 mb-4">I'm still learning to be a front-end website developer. </p>
+                <div class="text-xs mb-6 hidden sm:block">
+                    <button
+                        class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">HTML</button>
+                    <button
+                        class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">CSS</button>
+                    <button
+                        class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">Tailwind CSS</button>
+                    <button
+                        class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">Javascript</button>
+                </div>
+                <div class="flex flex-row justify-start gap-3 text-nowrap ">
+
+                    <a href="https://wa.me:/+6281377120177" target="_blank" rel="no-referrer noopener"
+                        class="shadow-[0_0_10px_1px_rgba(255,255,255,0.7)] text-white bg-black px-6 py-2 rounded-lg transition-all duration-300 hover:text-black hover:scale-110 hover:bg-white">
+                        <button class=" font-semibold ">Contact me</button>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1ph8BIWUTBAPodGVJcMufULTaqJLlvlHN/view?usp=sharing" target="_blank"
+                        rel="no-referrer noopener"
+                        class="shadow-[0_0_10px_1px_rgba(255,255,255,0.7)] text-white bg-black px-6 py-2 rounded-lg transition-all duration-300 hover:text-black hover:scale-110 hover:bg-white">
+                        <button class=" font-semibold ">Download CV</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center md:justify-end overflow-hidden mb:1/4 ">
+                <img class="w-5/5s md:w-full lg:w-4/5 max-w-sm hover:scale-110 hover:rotate-3 transition-all duration-700 md:max-w-md lg:max-w-lg object-contain"
+                    src="../img/5ffa48b57267ecb8e6220c294f68b5b1-removebg-preview.png" alt="">
+            </div>
+        </section>
+
+    </main>
+        
+
+        <section id="about" class="text-white py-[10%] px-[5%] lg:px-[10%]">
+            <h1 class="text-4xl font-bold mb-[10%] text-center glow opacity-0 translate-y-12 transition-all duration-700 ease-out"data-animate-on-scroll data-delay="0">ABOUT ME</h1>
+            <div class="w-full mx-auto relativ">
+            <div class="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap:12 items-center">
+            <img class="w-64 h-64 object-cover rounded-full mb-4 opacity-0 translate-y-12 transition-all duration-700 ease-out" data-animate-on-scroll data-delay="500" src="../img/download (6).jpeg" alt="Profile Picture">
+            <p class="text-lg brightness-70 text-balance opacity-0 translate-y-12 transition-all duration-700 ease-out" data-animate-on-scroll data-delay="800">
+                Hello! Saya Dafikk, calon pengembang front end web developer. Saya bersemangat menciptakan pengalaman
+                website yang menarik dan ramah pengguna. Untuk sekarang saya berfokus untuk menguasai HTML, CSS, Javascript
+                dan framework untuk membangun website yang responsive dan menarik secara visual seperti Tailwind CSS, Saya 
+                selalu bersemangat dalam mempelajari teknologi baru dan meningkatkan keterampilan saya untuk memberikan solusi 
+                web berkualitas tinggi.
             </p>
-            <p class="font-light text-white brightness-80 mb-4">I'm still learning to be a front end website developer. </p>
-            <div class="text-xs mb-6 hidden sm:block">
-            <button class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">HTML</button>
-            <button class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">CSS</button>
-            <button class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">Tailwind CSS</button>
-            <button class=" text-white/80 px-4 py-2 border-[0.5px] border-white/40 border-solid rounded-full font bg-white/10 backdrop-blur-md hover:brightness-160">Javascript</button>
-            </div>
-            <div class="flex flex-row justify-start gap-3 text-nowrap ">
-                
-                <a href="https://wa.me:/+6281377120177"target="_blank" rel="no-referrer noopener" class="shadow-[0_0_10px_1px_rgba(255,255,255,0.7)] text-white bg-black px-6 py-2 rounded-lg  transition-all duration-300 hover:text-black hover:scale-110 hover:bg-white">
-                    <button class=" font-semibold ">Contact me</button>
-                </a>
-                <a href="https://drive.google.com/file/d/1ph8BIWUTBAPodGVJcMufULTaqJLlvlHN/view?usp=sharing"target="_blank" rel="no-referrer noopener" class="shadow-[0_0_10px_1px_rgba(255,255,255,0.7)]  text-white bg-black px-6 py-2 rounded-lg  transition-all duration-300 hover:text-black hover:scale-110 hover:bg-white">
-                    <button class=" font-semibold ">Download CV</button>
-                </a>
             </div>
             </div>
-
-            <!-- img -->
-            <div class=" flex justify-center md:justify-end overflow-hidden mb:1/4 ">
-                <img class="w-5/5s md:w-full lg:w-4/5 max-w-sm hover:scale-110 hover:rotate-3 transition-all duration-700 md:max-w-md lg:max-w-lg object-contain" src="../img/5ffa48b57267ecb8e6220c294f68b5b1-removebg-preview.png" alt="">
-            </div>
-        </div>
-
-        <!-- About me -->
-         <div class="text-white relative">
-            <img class="w-38 h-38 object-cover rounded-full " src="../img/download (6).jpeg" alt="">
-            <h1>ABOUT ME</h1>
-            <P></P>
-         </div>
+            </section>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
