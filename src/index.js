@@ -9,16 +9,13 @@ function onToggleMenu(e) {
     if (e.name === 'menu-outline') {
         e.name = 'close-outline';
         navLinks.classList.remove('top-[-1000%]');
-        navLinks.classList.add('top-[10%]'); // Set to 100% of header height
+        navLinks.classList.add('top-[10%]'); 
     } else {
         e.name = 'menu-outline';
         navLinks.classList.remove('top-[10%]');
         navLinks.classList.add('top-[-1000%]');
     }
 }
-
-const navbar = document.getElementById('navbar');
-const scrollThreshold = 50;
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > scrollThreshold) {
