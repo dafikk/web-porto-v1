@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // text run
 const typedTextSpan = document.getElementById('typedText');
-const textArray = ["Front End Web", "Desain Visual", "UI/UX Designer", "Video Editing"];
+const textArray = ["Front End Web Developer", "Desain Visual", "UI/UX Designer", "Video Editing"];
 const typingSpeed = 150;
 const deletingSpeed = 100;
 const delayBetweenTexts = 1500;
@@ -111,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Kalkulator RSS ROK(Rise of Kingdoms)',
             description: 'Kalkulator tersebut memiliki fitur yang bertujuan untuk memudahkan player ROK dalam menghitung jumlah stock RSS mereka yang dapat dikirim',
             technologies: ['Javascript', 'Tailwind CSS'],
-            link: 'comingsoon.html',
-            image: '../img/comingsoon.jpg'
+            link: 'https://rok-kalkulator.vercel.app/',
+            image: '../img/rok1.png'
         }
     ];
 
